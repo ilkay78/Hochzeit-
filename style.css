@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  max-height: 600px;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color: #ed6ad4;
+  background-color: #69eabd;
+  border: 3px solid #69eabd;
+  box-shadow: 6px 8px #69eabd;
+  font-size: 4em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 84px;
+  width: 100%;
+  text-align: center;
+}
+.wedding {
+  color: #ed6ad4;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.logo {
+  color: #69eabd;
+  font-size: 2.5em;
+  text-decoration: none;
+  font-weight: bolder;
+  position: fixed;
+  top: 10px;
+ animation-name: logo;
+animation-duration: 3s;
+  }
+.menuIcon-container{
+    display:none;
+  }
+  @keyframes logo {
+    from {color: rgb(82, 64, 79);}
+    to {color: rgb(252, 4, 157);}
+  }
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #ed6ad4;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .text {
+    font-size: 10px;
+    background-color: inherit;
+    border: none;
+    box-shadow: none;
+    transition: 2s;
+  
+  }
+ 
+  .menuIcon-container{
+    position: fixed;
+    top:0;
+    right:70px;
+    display:block;
+    z-index: 999;
+     }
+     .nav-container {
+      position: fixed;
+      z-index: 1;
+      margin-top:35px;
+      }
+     .nav{
+      display: flex;
+      flex-direction: column;
+      
+     }
+     
+  .text:hover {
+    transform: scaleX(2.5);
+  }
+  
+  .logo {
+    display: none;
+  }
+  h1 {
+    position: absolute;
+    top: 0;
+  }
+  #personal-data label {
+    display: none;
+  }
+  .anrede label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.nav-container {
+ position: fixed;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+}
+.nav li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 30px;
+}
+a {
+  text-decoration: none;
+  font-size: larger;
+  color: #69eabd;
+}
+a:hover {
+  border-radius: 5px;
+  background-color: #69eabd;
+  color: white;
+}
+a:visited {
+  color: rgba(206, 35, 178, 0.39);
+}
+section {
+  width: auto;
+  height: 100vh;
+}
+
+.icon {
+  font-size: larger;
+}
+
+.home-container {
+  margin: 40px;
+  text-align: center;
+}
+.icon-container {
+ 
+  display: flex;
+  justify-items: space-between;
+  border-radius: 10px;
+}
+hr {
+  width: 50%;
+  
+}
+#home div, #home p{
+ 
+  margin-top: 40px;
+}
+
+.wedding5 {
+  height: 300px;
+  width: 450px;
+  border: 2px solid #69eabd;
+  border-radius: 50%;
+}
+time:hover{
+  size: 2em;
+  font-weight: bolder;
+  background-color: #ed6ad4;
+  }
+.menü form {
+  height: 80%;
+  width: 600px;
+  box-shadow: 4px 6px 8px;
+}
+#essen {
+  margin: 20px;
+  padding: 10px;
+  width: 80%;
+}
+#home div,
+#home p,
+#contact,
+#personal-data,
+.wunsch,
+#menüplan,#tagesablauf,
+.menü-container form,
+#anfahrt div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-container,
+.menü-container {
+  height: 80%;
+  width: 100%;
+  box-shadow: 4px 6px 8px;
+}
+
+h3 {
+  text-align: center;
+}
+.anrede {
+  margin: 50px;
+}
+.anrede label {
+  display: flex;
+}
+[type="radio"] {
+  margin-left: 25px;
+}
+[type="email"],
+[type="text"],
+[type="number"] {
+  background-color: rgb(241, 239, 239);
+  margin: 15px;
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: 0.6s ease-in-out;
+}
+[type="email"]:focus,
+[type="text"]:focus,
+[type="number"]:focus {
+  font-weight: bold;
+  background-color: white;
+  transform: scale(1.2);
+}
+[type="submit"]:valid,
+[type="email"]:valid,
+[type="text"]:valid {
+  border: 1px solid #69eabd;
+}
+[type="submit"]:invalid,
+[type="email"]:invalid,
+[type="text"]:invalid {
+  border: red;
+  color: red;
+}
+[type="textarea"] {
+  width: 80%;
+  height: 200px;
+  margin-bottom: 5px;
+}
+[type="textarea"]:valid {
+  background-color: #69eabd;
+}
+
+[type="submit"] {
+  background-color: skyblue;
+  padding: 15px;
+  width: 80%;
+}
+[type="submit"]:hover {
+  background-color: #69eabd;
+}
+[type="submit"]:active {
+  background-color: #ea69d5;
+}
+#tagesablauf p {
+  color: #69eabd;
+  font-size: 3em;
+  margin-bottom: 60px;
+}
+#tagesablauf li {
+  font-size: larger;
+  margin-bottom: 60px;
+  list-style: none;
+}
+ 
+#anfahrt {
+  margin-bottom: 250px;
+}
+iframe {
+  margin: 20px;
+  border-radius: 100%;
+}
